@@ -1,4 +1,4 @@
-import Promise from 'bluebird';
+var Promise = require('bluebird');
 
 const users = {
 	4:{name:'Mark'},
@@ -6,11 +6,11 @@ const users = {
 };
 
 export default function request(url){
-	return Promise((resolve,reject) =>{
+	return new Promise((resolve,reject) =>{
 		const userID = parseInt(url.substr('/users/'.length),10);
 		process.nextTick(
 			()=> users[userID] ? resolve(users[userID]) : reject({
-				error:'User with ' + userID + ' not found'
+				error:'User with ' + userID + ' not found.'
 			})
 		);
 	});
