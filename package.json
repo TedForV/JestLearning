@@ -1,0 +1,48 @@
+{
+  "name": "jest_learning",
+  "version": "1.0.0",
+  "description": "example for jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TedForV/JestLearning.git"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "TedForV",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TedForV/JestLearning/issues"
+  },
+  "homepage": "https://github.com/TedForV/JestLearning#readme",
+  "devDependencies": {
+    "babel-jest": "^14.1.0",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-3": "^6.11.0",
+    "jest-cli": "^14.1.0",
+    "react-addons-test-utils": "^15.3.0",
+    "react-test-renderer": "^15.3.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "jquery": "^3.1.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
+  },
+  "jest": {
+    "automock": true,
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/react-dom/",
+      "<rootDir>/node_modules/react-test-renderer/",
+      "<rootDir>/node_modules/react-addons-test-utils/"
+    ]
+  }
+}
